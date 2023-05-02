@@ -1,4 +1,6 @@
 import React from "react";
+import {IoLogoLinkedin} from "react-icons/io";
+import {MdAlternateEmail} from "react-icons/md";
 
 const Footer: React.FC = () => {
     const currentYear: number = new Date().getFullYear();
@@ -12,20 +14,21 @@ const Footer: React.FC = () => {
                         href="mailto:kwiatkowski.michal1@gmail.com"
                         className="text-sm text-gray-500 hover:text-gray-700 mr-2 md:mr-4"
                     >
-                        Email
+                        <MdAlternateEmail size={30} />
                     </a>
-                    <a
-                        href="https://www.linkedin.com/in/michal---kwiatkowski/"
-                        target="_blank"
-                        rel="noreferrer noopener"
-                        className="text-sm text-gray-500 hover:text-gray-700 mr-2 md:mr-4"
-                    >
-                        LinkedIn
-                    </a>
+                    <div className="flex flex-row">
+                        <a
+                            href="https://www.linkedin.com/in/michal---kwiatkowski/"
+                            target="_blank"
+                            rel="noreferrer noopener"
+                            className="text-sm text-gray-500 hover:text-gray-700 mr-2 md:mr-4"
+                        >
+                            <IoLogoLinkedin size={30} />
+                        </a>
+                    </div>
                 </div>
             </div>
         </footer>
     );
 };
-
 export default Footer;
