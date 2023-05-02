@@ -5,7 +5,7 @@ import DishForm from "./components/Form";
 
 const App: React.FC = () => {
     return (
-        <div className="flex flex-col justify-center align-middle border-2 w-full shadow-2xl max-w-lg mx-auto my-24 mb-68 text-center p-4 rounded bg-white">
+        <div className="flex flex-col justify-center align-middle border-2 shadow-2xl max-w-lg md:mx-auto mx-10 my-24 mb-68 text-center p-4 rounded bg-white">
             <Provider store={store}>
                 <DishForm />
             </Provider>
