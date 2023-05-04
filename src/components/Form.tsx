@@ -88,7 +88,7 @@ const SelectingFormValuesForm: React.FC<InjectedFormProps<IFormData, Props> & Pr
                         name="name"
                         component="input"
                         type="text"
-                        placeholder="Please provide a name of your dish"
+                        placeholder="Please provide a name"
                         required
                     />
                     <Label htmlFor="preparation_time" title="Preparation time" />
