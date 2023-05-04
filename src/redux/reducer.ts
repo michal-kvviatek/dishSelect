@@ -1,6 +1,6 @@
-import {State} from "../types/types";
+import {IState} from "../types/types";
 
-export const initialState: State = {
+export const initialState: IState = {
     spicinessScale: 1,
     numSandwichSlices: 1,
     numPizzaSlices: 1,
@@ -13,7 +13,7 @@ export type Action =
     | { type: 'SET_NUM_PIZZA_SLICES', payload: number }
     | { type: 'SET_PIZZA_DIAMETER', payload: number };
 
-export const reducer = (state: State, action: Action) => {
+export const reducer = (state: IState, action: Action) => {
     switch (action.type) {
         case 'SET_SPICINESS_SCALE':
             return { ...state, spicinessScale: action.payload };

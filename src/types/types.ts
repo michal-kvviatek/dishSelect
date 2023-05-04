@@ -1,6 +1,6 @@
 import React, {ReactNode} from "react";
 
-export interface State {
+export interface IState {
     spicinessScale: number;
     numSandwichSlices: number;
     numPizzaSlices: number;
@@ -17,7 +17,7 @@ export interface IFormData {
     slices_of_bread?: number;
 };
 
-export interface SliderProps {
+export interface ISlider {
     input: {
         value: number;
         onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -37,4 +37,11 @@ export interface ILabel {
     title: string;
     className?: string;
     htmlFor?: string;
+}
+
+export interface IMessages {
+    successMessage?: string;
+    closeSuccessMessage?: React.MouseEventHandler<SVGSVGElement>;
+    errorMessage?: string;
+    closeErrorMessage?: React.MouseEventHandler<SVGSVGElement>;
 }

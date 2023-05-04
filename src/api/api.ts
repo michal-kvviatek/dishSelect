@@ -2,7 +2,7 @@ import axios from 'axios';
 import { IFormData } from '../types/types';
 
 const postEndpoint = 'https://umzzcc503l.execute-api.us-west-2.amazonaws.com/dishes/';
-const sendDataToApi = async (formData: IFormData) => {
+export const sendDataToApi = async (formData: IFormData) => {
     let id: number | undefined;
 
     switch (formData.type) {
@@ -24,7 +24,10 @@ const sendDataToApi = async (formData: IFormData) => {
     };
     try {
         const response = await axios.post(postEndpoint, dataToSend);
-        return response.data;
+        return {
+            data: response.data,
+            status: response.status,
+        };
     } catch (error: any) {
         if (error.response) {
             console.log(error.response.data);

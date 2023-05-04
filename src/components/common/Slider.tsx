@@ -1,7 +1,7 @@
 import React from "react";
-import {SliderProps} from "../../types/types";
+import {ISlider} from "../../types/types";
 
-const Slider = ({ input, min, max, step }: SliderProps) => {
+const Slider = ({ input, min, max, step }: ISlider) => {
     input.value = input.value || 1;
     return (
         <div className="flex flex-col-reverse items-center justify-between my-2">

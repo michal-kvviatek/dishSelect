@@ -2,7 +2,7 @@ import React from "react";
 import {IoLogoLinkedin} from "react-icons/io";
 import {MdAlternateEmail} from "react-icons/md";
 
-const Footer: React.FC = () => {
+const Footer = () => {
     const currentYear: number = new Date().getFullYear();
 
     return (
